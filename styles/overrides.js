@@ -25,7 +25,8 @@ export const Button = {
       bg: "gray.100",
     },
     clear: {
-      bg: "none",
+      bg: "red.800",
+      left: "60%",
       _hover: "",
       fontSize: ["0.7em", "0.7em", "0.9em"],
     },
@@ -51,10 +52,13 @@ export const Heading = {
   sizes: {},
   variants: {
     regular: {
+      color: ['gray.500'],
       fontSize: ["0.8em", "0.8em", "1.2em", "1.2em"],
     },
     title: {
-      fontSize: ["2em", "2.4em", "2.9em", "2.9em", "2.9em", "3.5em"],
+      color:['blue.700'],
+      fontSize:["2em", "2.4em", "3.3em"],
+      /*fontSize: ["2em", "2.4em", "2.9em", "2.9em", "2.9em", "3.5em"],*/
     },
   },
   defaultProps: {
@@ -106,6 +110,10 @@ export const Text = {
       fontSize: ["0.6em", "0.6em", "1em", "1em", "1em", "1em"],
     },
   },
-  variants: {},
+  variants: {
+    Limit: {
+      color: ["green.800"]
+    }
+  },
   defaultProps: {},
 };

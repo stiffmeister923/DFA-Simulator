@@ -57,7 +57,7 @@ const LeftBox = ({
                         </Box>
                       ) : (
                         data.result == "Invalid" && (
-                          <Box color="pink.300">
+                          <Box color="pink.500">
                             <ImCross />
                           </Box>
                         )
@@ -100,7 +100,7 @@ const LeftBox = ({
                   Clear
                 </Button>
               </Flex>
-              <Text
+              <Text variant="Limit"
                 fontWeight="semibold"
                 fontSize={["0.7em", "0.7em", "0.9em"]}
               >

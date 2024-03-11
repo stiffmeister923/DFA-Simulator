@@ -4,7 +4,7 @@ export const Badge = {
   },
   sizes: {
     node: {
-      bg: "gray.700",
+      bg: "#5885AF",
       color: ["gray.200", null, "gray.200"],
 
       // h: ["2em", "2em", "3.5em", "3.5em"],
@@ -35,121 +35,121 @@ export const Badge = {
       top: "50%",
       left: "10%",
 
-      borderColor: "blue.300",
+      borderColor: "#75E6DA",
     },
     q2: {
       top: "20%",
       left: "20%",
 
-      borderColor: "orange.300",
+      borderColor: "#75E6DA",
     },
     q3: {
       top: "50%",
       left: "30%",
 
-      borderColor: "purple.300",
+      borderColor: "#75E6DA",
     },
     q4: {
       top: "20%",
       left: "40%",
 
-      borderColor: "orange.300",
+      borderColor: "#75E6DA",
     },
     q5: {
       top: "80%",
       left: "40%",
 
-      borderColor: "orange.300",
+      borderColor: "#75E6DA",
     },
     q6: {
       top: "20%",
       left: "60%",
 
-      borderColor: "purple.300",
+      borderColor: "#75E6DA",
     },
     q7: {
       top: "80%",
       left: "60%",
 
-      borderColor: "purple.300",
+      borderColor: "#75E6DA",
     },
     q8: {
       top: "50%",
       left: "70%",
 
-      borderColor: "blue.300",
+      borderColor: "#75E6DA",
     },
     q9: {
       top: "50%",
       left: "90%",
 
-      borderColor: "teal.300",
+      borderColor: "#75E6DA",
     },
     q10: {
       top: "50%",
       left: "90%",
 
-      borderColor: "teal.300",
+      borderColor: "#75E6DA",
     },
     T: {
       top: "50%",
       left: "30%",
 
-      borderColor: "pink.300",
+      borderColor: "#75E6DA",
     },
     1: {
       top: "50%",
       left: "10%",
 
-      borderColor: "orange.300",
+      borderColor: "#75E6DA",
     },
     2: {
       top: "20%",
       left: "20%",
 
-      borderColor: "purple.300",
+      borderColor: "#75E6DA",
     },
     3: {
       top: "80%",
       left: "20%",
 
-      borderColor: "orange.300",
+      borderColor: "#75E6DA",
     },
     4: {
       top: "50%",
       left: "30%",
 
-      borderColor: "orange.300",
+      borderColor: "#75E6DA",
     },
     5: {
       top: "50%",
       left: "45%",
 
-      borderColor: "teal.300",
+      borderColor: "#75E6DA",
     },
     6: {
       top: "85%",
       left: "60%",
 
-      borderColor: "purple.300",
+      borderColor: "#75E6DA",
     },
     7: {
       top: "15%",
       left: "60%",
 
-      borderColor: "purple.300",
+      borderColor: "#75E6DA",
     },
     8: {
       top: "50%",
       left: "75%",
 
-      borderColor: "blue.300",
+      borderColor: "#75E6DA",
     },
     9: {
       top: "50%",
       left: "90%",
 
-      borderColor: "blue.300",
+      borderColor: "#75E6DA",
     },
   },
   defaultProps: {

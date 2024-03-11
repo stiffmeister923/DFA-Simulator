@@ -27,114 +27,120 @@ const FirstDFA = ({ currentNode, simulating }) => {
       {/* LETTERS */}
 
       {/* q1 q2 */}
-      <Text top="31%" left="14%" size="label">
+      <Text top="31%" left="14%" size="label" color="#C3E0E5">
         a
       </Text>
-      {/* q2 t */}
-      <Text top="31%" left="26%" size="label">
+      {/* q2 q3 */}
+      <Text top="31%" left="26%" size="label" color="#C3E0E5">
         a,b
       </Text>
 
-      {/* q5 t */}
-      <Text top="69%" left="34%" size="label">
-        b
-      </Text>
       {/* q3 q5 */}
-      <Text top="50%" left="37%" size="label">
+      <Text top="69%" left="34%" size="label" color="#C3E0E5">
         b
       </Text>
-      {/* q5 q3 */}
-      <Text top="50%" left="43%" size="label">
-        a
-      </Text>
-      {/* q3 q7 */}
-      <Text top="17%" left="50%" size="label">
-        a
-      </Text>
-      {/* q4 q8 */}
-      <Text top="77%" left="50%" size="label">
+      {/* q4 q5 */}
+      <Text top="50%" left="37%" size="label" color="#C3E0E5">
         b
       </Text>
-      {/* q3 t */}
-      <Text top="31%" left="34%" size="label">
+      {/* q5 q4 */}
+      <Text top="50%" left="43%" size="label" color="#C3E0E5">
         a
       </Text>
-      {/* q1 T */}
-      <Text top="47%" left="20%" size="label">
+      {/* q4 q6 */}
+      <Text top="17%" left="50%" size="label" color="#C3E0E5">
+        a
+      </Text>
+      {/* q5 q7 */}
+      <Text top="77%" left="50%" size="label" color="#C3E0E5">
+        b
+      </Text>
+      {/* q3 q4 */}
+      <Text top="31%" left="34%" size="label" color="#C3E0E5">
+        a
+      </Text>
+      {/* q1 q3 */}
+      <Text top="47%" left="20%" size="label" color="#C3E0E5">
         b
       </Text>
 
-      {/* q5 q6 */}
-      <Text top="69%" left="46%" size="label">
+      {/* q6 q5 */}
+      <Text top="69%" left="46%" size="label" color="#C3E0E5">
         b
+      </Text>
+
+      {/* q7 q8 */}
+      <Text top="69%" left="66%" size="label" color="#C3E0E5">
+        b
+      </Text>
+      {/* q6 q8 */}
+      <Text top="31%" left="66%" size="label" color="#C3E0E5">
+        a
+      </Text>
+      {/* q7 q4 */}
+      <Text top="31%" left="46%" size="label" color="#C3E0E5">
+        a
       </Text>
 
       {/* q8 q9 */}
-      <Text top="69%" left="66%" size="label">
-        b
-      </Text>
-      {/* q7 q9 */}
-      <Text top="31%" left="66%" size="label">
-        a
-      </Text>
-      {/* q3 q6 */}
-      <Text top="31%" left="46%" size="label">
-        a
-      </Text>
-
-      {/* q9 q10 */}
-      <Text top="45%" left="80%" size="label">
+      <Text top="45%" left="80%" size="label" color="#C3E0E5">
         a,b
       </Text>
-      {/* q7 q7 */}
+      {/* q9 */}
       <Text
         top="49%"
         left={["71%", "71%", "68%", null, null, "97.5%"]}
         size="label"
+        color="#C3E0E5"
       >
         a,b
       </Text>
 
       {/* ARROW BODY */}
 
-      {/* q9 q10 */}
+      {/* q8 q9 */}
       <ArrowBody
-        w={["3em", "3em", "9em", "9em", "9em", "9em"]}
+        position="fixed"
+        w = "9em"
+        left = "80%"
+        top = "55%"
+        /*w={["3em", "3em", "9em", "9em", "9em", "9em"]}
         top={["58%", "58%", "55%", "55%", "55%", "55%"]}
-        left="80%"
+        left="80%"*/
       />
-      {/* q3 q7 */}
+      {/* q4 q6 */}
       <ArrowBody
         w={["3em", "3em", "9em", "9em", "9em", "9em"]}
         top={["26.7%"]}
         left="50%"
       />
-      {/* q5 q8 */}
+      {/* q5 q7 */}
       <ArrowBody
         w={["3em", "3em", "9em", "9em", "9em", "9em"]}
         top={["86.3%"]}
         left="50%"
       />
-      {/* q3 q5 */}
+      {/* q4 q5 */}
       <ArrowBody
         w={["3em", "3em", "9em", "9em", "9em", "9em"]}
         top={["53%"]}
         left="37%"
         rotate="90"
       />
-      {/* q5 q3 */}
+      {/* q5 q4 */}
       <ArrowBody
         w={["3em", "3em", "9em", "9em", "9em", "9em"]}
         top={["53%"]}
         left="40%"
         rotate="90"
       />
-      {/* q7 q8 */}
+      {/* q6 q8 */}
       <ArrowBody
         w={["7em", "7em", "9em", "9em", "9em", "9em"]}
         top="35%"
         left={["55.5%", "55.5%", "58%", "58%", "58%", "62.5%"]}
         rotate="45"
+        position='fixed'
       />
       {/* trap ul */}
       <ArrowBody
@@ -212,13 +218,14 @@ const FirstDFA = ({ currentNode, simulating }) => {
         left={["17.4%", "17.4%", "17.3%", "17.3%", "17.3%", "26.6%"]}
         rotate={["0"]}
       />
-      {/* q2 t */}
+      {/* q2 q3 */}
       <ArrowHead
         top={["41.6%", "41.6%", "41.7%", "41.7%", "41.7%", "42.6%"]}
         left={["27.3%", "27.3%", "27.1%", "27.1%", "27.1%", "27.3%"]}
-        rotate={["47", "47", "40", "40", "40", "40"]}
+        rotate={["40"]}
+        /*rotate={["47", "47", "40", "40", "40", "40"]} */
       />
-      {/* q3 q5 */}
+      {/* q4 q5 */}
       <ArrowHead top={["69%"]} left={["38.5%"]} rotate={["90"]} />
       {/* q3 q7 */}
       <ArrowHead top={["21.3%"]} left={["56.5%"]} rotate={["0"]} />

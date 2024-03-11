@@ -52,7 +52,7 @@ export const ArrowLoopLg = ({ top, left, rotate }) => {
         translateX="-50%"
         translateY="-50%"
         transform="auto"
-        color="gray.700"
+        color="green.600"
         display={["none", null, "none", null, null, "flex"]}
       >
         <BsArrowClockwise size="2.2em" />
@@ -75,7 +75,7 @@ export const ArrowBody = ({ w, top, left, rotate }) => {
         translateY="-50%"
         transform="auto"
         borderTop="solid 2px"
-        borderTopColor="gray.700"
+        borderTopColor="gray.300"
       />
     </>
   );

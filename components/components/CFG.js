@@ -27,7 +27,7 @@ const CFG = ({ prob2 }) => {
         >
           <PopoverArrow />
           <PopoverCloseButton />
-          <PopoverHeader fontWeight="semibold">
+          <PopoverHeader fontWeight="semibold" color="black">
             Context-free Grammar
           </PopoverHeader>
           <PopoverBody align="center">

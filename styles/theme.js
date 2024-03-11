@@ -12,12 +12,12 @@ export const theme = extendTheme({
         color: "gray.700",
       },
       "h1, h2, h3, h4": {
-        color: "gray.700",
+        color: "blue.700",
       },
     }),
   },
   config: {
-    initialColorMode: "light",
+    initialColorMode: "dark",
     useSystemColorMode: false,
   },
   textStyles: {

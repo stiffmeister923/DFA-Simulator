@@ -25,59 +25,59 @@ const SecondDFA = ({ currentNodeVal, simulatingStatus }) => {
   return (
     <>
       {/* q1 q2 */}
-      <Text size="label" top="31%" left="14.5%">
+      <Text size="label" top="31%" left="14.5%" color="#C3E0E5">
         1
       </Text>
       {/* q1 q3 */}
-      <Text size="label" top="67%" left="14.5%">
+      <Text size="label" top="67%" left="14.5%" color="#C3E0E5">
         0
       </Text>
       {/* q3 q4 */}
-      <Text size="label" top="67%" left="26%">
+      <Text size="label" top="67%" left="26%" color="#C3E0E5">
         1
       </Text>
       {/* q4 q5 */}
-      <Text size="label" top="46%" left="37%">
+      <Text size="label" top="46%" left="37%" color="#C3E0E5">
         1,0
       </Text>
       {/* q8 q9 */}
-      <Text size="label" top="46%" left="82%">
+      <Text size="label" top="46%" left="82%" color="#C3E0E5">
         1,0
       </Text>
       {/* q6 q7 */}
-      <Text size="label" top="46%" left="63%">
+      <Text size="label" top="46%" left="63%" color="#C3E0E5">
         1
       </Text>
       {/* q7 q6 */}
-      <Text size="label" top="46%" left="57%">
+      <Text size="label" top="46%" left="57%" color="#C3E0E5">
         0
       </Text>
       {/* q1 q2 */}
-      <Text size="label" top="31%" left="42.5%">
+      <Text size="label" top="31%" left="42.5%" color="#C3E0E5">
         1
       </Text>
       {/* q2 q5 */}
-      <Text size="label" top="31%" left="26%">
+      <Text size="label" top="31%" left="26%" color="#C3E0E5">
         0
       </Text>
       {/* q5 q7 */}
-      <Text size="label" top="31%" left="50%">
+      <Text size="label" top="31%" left="50%" color="#C3E0E5">
         1
       </Text>
       {/* q3 q5 */}
-      <Text size="label" top="67%" left="42.5%">
+      <Text size="label" top="67%" left="42.5%" color="#C3E0E5">
         0
       </Text>
       {/* q5 q6 */}
-      <Text size="label" top="67%" left="50%">
+      <Text size="label" top="67%" left="50%" color="#C3E0E5">
         0
       </Text>
       {/* q6 q8 */}
-      <Text size="label" top="67%" left="70%">
+      <Text size="label" top="67%" left="70%" color="#C3E0E5">
         0
       </Text>
       {/* q7 q8 */}
-      <Text size="label" top="31%" left="70%">
+      <Text size="label" top="31%" left="70%" color="#C3E0E5">
         1
       </Text>
       {/* q7 q7 */}
