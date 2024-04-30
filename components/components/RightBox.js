@@ -42,12 +42,13 @@ const RightBox = ({
           direction="row"
           justify={["flex-end", null, "flex-end", null, null, "space-between"]}
         >
-          <Heading display={["none", null, "none", null, null, "flex"]}>
+          <Heading variant="RegEx" display={["none", null, "none", null, null, "flex"]}>
             Regular Expression: <Tag as="span">{!prob2 ? regex1 : regex2}</Tag>
           </Heading>
           <Flex>
             <CFG prob2={prob2} />
             <Button
+              variant = "Switch"
               disabled={simulating}
               onClick={handleSwitch}
               rightIcon={<CgChevronRight />}

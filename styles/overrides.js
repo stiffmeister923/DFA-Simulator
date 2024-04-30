@@ -24,12 +24,29 @@ export const Button = {
       fontSize: ["0.7em", "0.7em", "0.9em"],
       bg: "gray.100",
     },
+    Main: {
+      bg:"gray.700"
+    },
     clear: {
       bg: "red.800",
-      left: "60%",
+      pos: "absolute",
+      left: "28%",
+      top: "55%",
       _hover: "",
       fontSize: ["0.7em", "0.7em", "0.9em"],
     },
+    CFG: {
+      pos:"absolute",
+      left: "12%",
+      top: "55%",
+      bg: "gray.700"
+    },
+    Switch: {
+      pos: "absolute",
+      left: "3.4%",
+      top: "55%",
+      bg: "gray.700",
+    }
   },
   defaultProps: {
     size: "regular",
@@ -60,6 +77,12 @@ export const Heading = {
       fontSize:["2em", "2.4em", "3.3em"],
       /*fontSize: ["2em", "2.4em", "2.9em", "2.9em", "2.9em", "3.5em"],*/
     },
+    RegEx: {
+      pos: "relative",
+      fontSize: ["0.8em", "0.8em", "1.2em", "1.2em"],
+      color: ['gray.500'],
+      left: "10em",
+    }
   },
   defaultProps: {
     variant: "regular",

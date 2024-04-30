@@ -17,7 +17,7 @@ const CFG = ({ prob2 }) => {
     <>
       <Popover isLazy placement="top">
         <PopoverTrigger>
-          <Button mx="2">Show CFG</Button>
+          <Button mx="2" variant="CFG">Show CFG</Button>
         </PopoverTrigger>
         <PopoverContent
           maxW={["17em", null, "16em", null, null, "16em"]}
@@ -33,16 +33,24 @@ const CFG = ({ prob2 }) => {
           <PopoverBody align="center">
             {!prob2 ? (
               <VStack>
-                <Text>{"S -> abaX | babX"}</Text>
-                <Text>{"X -> aX | bX | babY"}</Text>
-                <Text>{"Y -> aZ | bZ"}</Text>
-                <Text>{"Z -> aZ | bZ | aaZ | ^"}</Text>
+                <Text>{"S → XYZABC"}</Text>
+                <Text>{"X → b | aa | ab"}</Text>
+                <Text>{"Y → aY | bY | ɛ"}</Text>
+                <Text>{"Z → bbZ | abaZ | abZ | ɛ"}</Text>
+                <Text>{"A → aaa | bbb"}</Text>
+                <Text>{"B → a | b"}</Text>
+                <Text>{"C → aC | bC | abC | ɛ"}</Text>
               </VStack>
             ) : (
               <VStack>
-                <Text>{"S -> 1X | 0X"}</Text>
-                <Text>{"X -> 1X | 0X | 111Y | 000Y | 101Y"}</Text>
-                <Text>{"Y -> 1Y | 0X | ^"}</Text>
+                <Text>{"S → XYZABCD"}</Text>
+                <Text>{"X → 1X | 0X | ɛ"}</Text>
+                <Text>{"Y → 11 | 00 | 101 | 010"}</Text>
+                <Text>{"Z → 1Z | 0Z | 11Z | 00Z | 101Z | ɛ"}</Text>
+                <Text>{"A → 11 | 00"}</Text>
+                <Text>{"B → 11B | 00B | 101B | ɛ"}</Text>
+                <Text>{"C → 1 | 0"}</Text>
+                <Text>{"D → 1D | 0D | 11D | ɛ"}</Text>
               </VStack>
             )}
           </PopoverBody>

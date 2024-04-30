@@ -35,9 +35,6 @@ const LeftBox = ({
       >
         <Flex align="flex-end" justify="space-between">
           <Heading variant="title">DFA Simulator</Heading>
-          <Code fontSize={["0.5em", null, "0.6em", null, null, "0.6em"]}>
-            BETA
-          </Code>
         </Flex>
 
         <Divider mb="6" />
@@ -73,16 +70,17 @@ const LeftBox = ({
               maxLength="500"
               fontSize={["0.7em", "0.7em", "0.9em"]}
               my={3}
-              placeholder={!prob2 ? "e.g. babbabab" : "e.g. 0110101"}
+              placeholder={!prob2 ? "e.g. abbbbaa" : "e.g. 11011101"}
               value={string}
               onChange={handleTextChange}
             />
             <Flex justify="space-between" align="center">
               <Flex>
-                <Button type="submit" disabled={simulating}>
+                <Button variant="Main" type="submit" disabled={simulating}>
                   Validate
                 </Button>
                 <Button
+                  variant = "Main"
                   isLoading={simulating}
                   loadingText="simulating..."
                   spinnerPlacement="start"
@@ -107,7 +105,7 @@ const LeftBox = ({
                 Limit: {count}/500
               </Text>
             </Flex>
-            <Divider my="6" />
+            <Divider my="20" />
             {/* DIVIDER OF LEFT CONTAINER */}
             <Flex
               align="center"
