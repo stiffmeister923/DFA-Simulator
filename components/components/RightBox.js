@@ -1,4 +1,4 @@
-import { Flex, Button, Heading, Tag } from "@chakra-ui/react";
+import { Flex, Button, Heading, Tag, Code, Divider } from "@chakra-ui/react";
 
 import { CgChevronRight } from "react-icons/cg";
 
@@ -16,6 +16,14 @@ const RightBox = ({
 }) => {
   return (
     <>
+      <Flex align="flex-end" justify="space-between">
+        <Heading variant="title">DFA Simulator</Heading>
+        <Code fontSize={["0.5em", null, "0.6em", null, null, "0.6em"]}>
+          BETA
+        </Code>
+      </Flex>
+
+      <Divider mb="6" />
       <Flex
         direction="column"
         mb={[14, 14, 16, 16, 16, 0]}
@@ -42,13 +50,12 @@ const RightBox = ({
           direction="row"
           justify={["flex-end", null, "flex-end", null, null, "space-between"]}
         >
-          <Heading variant="RegEx" display={["none", null, "none", null, null, "flex"]}>
+          <Heading display={["none", null, "none", null, null, "flex"]}>
             Regular Expression: <Tag as="span">{!prob2 ? regex1 : regex2}</Tag>
           </Heading>
           <Flex>
             <CFG prob2={prob2} />
             <Button
-              variant = "Switch"
               disabled={simulating}
               onClick={handleSwitch}
               rightIcon={<CgChevronRight />}
