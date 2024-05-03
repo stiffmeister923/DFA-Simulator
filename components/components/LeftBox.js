@@ -33,12 +33,6 @@ const LeftBox = ({
         mr={[0, 0, 0, 0, 0, 24]}
         mt={[14, 14, 16, 16, 16, 0]}
       >
-        <Flex align="flex-end" justify="space-between">
-          <Heading variant="title">DFA Simulator</Heading>
-        </Flex>
-
-        <Divider mb="6" />
-
         <Box>
           <form onSubmit={handleTest}>
             <Flex align="center">
@@ -54,7 +48,7 @@ const LeftBox = ({
                         </Box>
                       ) : (
                         data.result == "Invalid" && (
-                          <Box color="pink.500">
+                          <Box color="pink.300">
                             <ImCross />
                           </Box>
                         )
@@ -70,17 +64,16 @@ const LeftBox = ({
               maxLength="500"
               fontSize={["0.7em", "0.7em", "0.9em"]}
               my={3}
-              placeholder={!prob2 ? "e.g. abbbbaa" : "e.g. 11011101"}
+              placeholder={!prob2 ? "e.g. babbabab" : "e.g. 0110101"}
               value={string}
               onChange={handleTextChange}
             />
             <Flex justify="space-between" align="center">
               <Flex>
-                <Button variant="Main" type="submit" disabled={simulating}>
+                <Button type="submit" disabled={simulating}>
                   Validate
                 </Button>
                 <Button
-                  variant = "Main"
                   isLoading={simulating}
                   loadingText="simulating..."
                   spinnerPlacement="start"
@@ -98,14 +91,14 @@ const LeftBox = ({
                   Clear
                 </Button>
               </Flex>
-              <Text variant="Limit"
+              <Text
                 fontWeight="semibold"
                 fontSize={["0.7em", "0.7em", "0.9em"]}
               >
                 Limit: {count}/500
               </Text>
             </Flex>
-            <Divider my="20" />
+            <Divider my="6" />
             {/* DIVIDER OF LEFT CONTAINER */}
             <Flex
               align="center"
