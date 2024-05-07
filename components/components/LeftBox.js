@@ -64,16 +64,17 @@ const LeftBox = ({
               maxLength="500"
               fontSize={["0.7em", "0.7em", "0.9em"]}
               my={3}
-              placeholder={!prob2 ? "e.g. babbabab" : "e.g. 0110101"}
+              placeholder={!prob2 ? "e.g. abbbbaa" : "e.g. 11001"}
               value={string}
               onChange={handleTextChange}
             />
             <Flex justify="space-between" align="center">
               <Flex>
-                <Button type="submit" disabled={simulating}>
+                <Button type="submit" variant="Main" disabled={simulating}>
                   Validate
                 </Button>
                 <Button
+                  variant="Main"
                   isLoading={simulating}
                   loadingText="simulating..."
                   spinnerPlacement="start"
