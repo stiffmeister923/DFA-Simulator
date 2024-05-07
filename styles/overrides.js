@@ -30,15 +30,15 @@ export const Button = {
     clear: {
       bg: "red.800",
       pos: "absolute",
-      left: "28%",
-      top: "55%",
+      left: "56.5%",
+      top: "81%",
       _hover: "",
       fontSize: ["0.7em", "0.7em", "0.9em"],
     },
     CFG: {
       pos:"absolute",
-      left: "12%",
-      top: "55%",
+      left: "44.3%",
+      top: "74%",
       bg: "gray.700"
     },
     Switch: {
