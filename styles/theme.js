@@ -3,6 +3,10 @@ import { Button, Heading, Tag, Flex, Input, Text } from "./overrides";
 import { Badge } from "./badgeStyles";
 
 export const theme = extendTheme({
+  fonts: {
+    body: `'Raleway', sans-serif`,
+    heading: `'Aileron', sans-serif`,
+  },
   styles: {
     global: (props) => ({
       body: {
