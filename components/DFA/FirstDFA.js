@@ -11,7 +11,11 @@ const Atom = motion(Badge);
 
 const variants = {
   initial: { y: "-50%", x: "-50%" },
-  pulse: { scale: 5, transition: { duration: 0.6 } },
+  pulse: {
+    scale: [1, 2.5, 1],
+    transition: { duration: 0.6 },
+    backgroundColor: "green",
+  },
   bounce: {
     y: ["-50%", "-200%", "-50%"],
     x: ["-50%", "-50%", "-50%"],
