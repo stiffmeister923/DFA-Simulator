@@ -32,6 +32,7 @@ const Main = () => {
     const countValue = e.target.value.length;
     setCount(countValue);
   };
+
   const handleReset = () => {
     setString("");
     setCount(0);
@@ -95,100 +96,125 @@ const Main = () => {
     setData(results);
   };
 
-  const handleInputString = () => {
-    input = input.replace(/\s+/g, "").toLowerCase();
+  const handleInputString = (input) => {
+    // Ensure input is not empty or undefined
+    if (!input) return [];
+
+    // If input contains newlines, split and process each line
+    if (input.includes(",")) {
+      return input
+        .trim()
+        .split(",")
+        .map((str) => str.replace(/\s+/g, "").toLowerCase());
+    } else {
+      // If input is a single string, process it directly
+      return [input.replace(/\s+/g, "").toLowerCase()];
+    }
   };
 
   const handleTest = (e) => {
     e.preventDefault();
-    handleInputString();
+    let processedInputs = handleInputString(input);
 
-    if (!prob2) {
-      if (input == "") {
+    const results = processedInputs.map((str) => {
+      if (str === "") {
         notInLanguageToast();
-        // console.log("No valid configuration for input string/empty");
-      } else if (input.includes("a") || input.includes("b")) {
-        // console.log("PROB1");
-        results = new DFA(input, problem1, language1);
-        // console.log(results);
-        setData(results);
+        return {
+          input: str,
+          result: "Invalid",
+          message: "Empty/Invalid Input",
+        };
+      } else if (!prob2 && (str.includes("a") || str.includes("b"))) {
+        const result = new DFA(str, problem1, language1);
+        return { input: str, result: result.result };
+      } else if (prob2 && (str.includes("0") || str.includes("1"))) {
+        const result = new DFA(str, problem2, language2);
+        return { input: str, result: result.result };
       } else {
         notInLanguageToast();
-        // console.log("No valid configuration for input string!!");
+        return {
+          input: str,
+          result: "Invalid",
+          message: "No valid configuration for input string",
+        };
       }
-    } else {
-      if (input == "") {
-        notInLanguageToast();
-        // console.log("No valid configuration for input string/empty");
-      } else if (input.includes("0") || input.includes("1")) {
-        // console.log("PROB2");
-        results = new DFA(input, problem2, language2);
-        // console.log(results);
-        setData(results);
-      } else {
-        notInLanguageToast();
-        // console.log("No valid configuration for input string!!");
-      }
-    }
+    });
+
+    setData(results);
   };
 
-  const handleSimulation = (e) => {
-    e.preventDefault();
-    handleInputString();
+  const handleSimulation = async (index) => {
+    let processedInputs = handleInputString(input);
+    const str = processedInputs[index];
+    if (!str) return; // If the string is undefined or empty, return
 
-    if (!prob2) {
-      if (input == "") {
-        notInLanguageToast();
-        // console.log("No valid configuration for input string/empty");
-      } else if (input.includes("a") || input.includes("b")) {
-        setSimulating(true);
-        // console.log("PROB1");
-        results = new DFA(input, problem1, language1);
-        // console.log(results);
-        const pathWithZeroes = [0].concat(...results.path.map((e) => [e, 0]));
-        // console.log(pathWithZeroes);
-        pathWithZeroes.some((node, i) => {
-          setTimeout(() => {
-            setCurrentNode(node);
-            node == pathWithZeroes[pathWithZeroes.length - 2] &&
-            !pathWithZeroes.includes("T") &&
-            !pathWithZeroes.includes("eos")
-              ? handleValid()
-              : node == "T" && pathWithZeroes.slice(-4)[0] == "T"
-              ? handleTrapped()
-              : pathWithZeroes.slice(-4)[3 - 1] == node &&
-                !pathWithZeroes.includes("T") &&
-                handleShort();
-          }, i * 200);
-        });
-      } else {
-        notInLanguageToast();
-        // console.log("No valid configuration for input string!!");
+    const problem = prob2 ? problem2 : problem1;
+    const language = prob2 ? language2 : language1;
+
+    if (
+      (prob2 && (str.includes("0") || str.includes("1"))) ||
+      (!prob2 && (str.includes("a") || str.includes("b")))
+    ) {
+      setSimulating(true);
+
+      const dfa = new DFA(str, problem, language);
+      const pathWithZeroes = [0].concat(...dfa.path.map((e) => [e, 0]));
+
+      const simulationResults = []; // Array to store the simulation result
+      for (let i = 0; i < pathWithZeroes.length; i++) {
+        const node = pathWithZeroes[i];
+        setCurrentNode(node);
+        if (
+          node === pathWithZeroes[pathWithZeroes.length - 2] &&
+          !pathWithZeroes.includes("T") &&
+          !pathWithZeroes.includes("eos")
+        ) {
+          handleValid();
+          simulationResults.push({ input: str, result: "Valid" });
+          break; // Exit the loop after handling valid result
+        } else if (node === "T" && pathWithZeroes.slice(-4)[0] === "T") {
+          handleTrapped();
+          simulationResults.push({ input: str, result: "Trapped" });
+          break; // Exit the loop after handling trapped result
+        } else if (
+          pathWithZeroes.slice(-4)[2] === node &&
+          !pathWithZeroes.includes("T")
+        ) {
+          handleShort();
+          simulationResults.push({ input: str, result: "Short" });
+          break; // Exit the loop after handling short result
+        }
+        await new Promise((resolve) => setTimeout(resolve, 200)); // Delay before moving to the next node
       }
+
+      setData(() => {
+        // Create a copy of the previous data
+        const newData = [...data];
+
+        // Iterate over the simulation results
+        simulationResults.forEach((simulationResult) => {
+          const { input } = simulationResult;
+
+          // Check if the input already exists in the data
+          const existingIndex = newData.findIndex(
+            (item) => item.input === input
+          );
+
+          if (existingIndex !== -1) {
+            // If input exists, replace its result with the new simulation result
+            newData[existingIndex] = simulationResult;
+          } else {
+            // If input doesn't exist, append the new simulation result
+            newData.push(simulationResult);
+          }
+        });
+
+        return newData;
+      });
+
+      setSimulating(false); // Set simulating to false after simulation is done
     } else {
-      if (input == "") {
-        notInLanguageToast();
-        // console.log("No valid configuration for input string/empty");
-      } else if (input.includes("0") || input.includes("1")) {
-        setSimulating(true);
-        // console.log("PROB2");
-        results = new DFA(input, problem2, language2);
-        // console.log(results);
-        const pathWithZeroes = [0].concat(...results.path.map((e) => [e, 0]));
-        // console.log(pathWithZeroes);
-        pathWithZeroes.some((node, i) => {
-          setTimeout(() => {
-            setCurrentNode(node);
-            node == pathWithZeroes[pathWithZeroes.length - 2] &&
-            !pathWithZeroes.includes("eos")
-              ? handleValid()
-              : pathWithZeroes.slice(-4)[3 - 1] == node && handleShort();
-          }, i * 200);
-        });
-      } else {
-        notInLanguageToast();
-        // console.log("No valid configuration for input string!!");
-      }
+      notInLanguageToast();
     }
   };
 
