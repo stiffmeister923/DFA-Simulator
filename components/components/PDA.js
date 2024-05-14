@@ -49,7 +49,7 @@ const PDA = () => {
             cx={state.x}
             cy={state.y}
             r="20"
-            stroke="black"
+            stroke="white"
             strokeWidth="2"
             fill="white"
           />
@@ -68,7 +68,7 @@ const PDA = () => {
               y1={fromState.y}
               x2={toState.x}
               y2={toState.y}
-              stroke="black"
+              stroke="white"
               strokeWidth="2"
               markerEnd="url(#arrowhead)"
             />
