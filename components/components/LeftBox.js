@@ -81,7 +81,9 @@ const LeftBox = ({
               fontSize={["0.7em", "0.7em", "0.9em"]}
               my={3}
               placeholder={
-                !prob2 ? "e.g. babbabab,baba,ab" : "e.g. 0110101,1010,010"
+                !prob2 ? `Language Accepted: [a, b]
+e.g. babbabab,baba,ab` : `Language Accepted: [0,1] 
+e.g. 0110101,1010,010`
               }
               value={string}
               onChange={handleTextChange}
@@ -93,9 +95,11 @@ const LeftBox = ({
                   Validate
                 </Button>
                 <Button
-                  variant="clear"
                   onClick={handleReset}
                   disabled={simulating}
+                  left = "5%"
+                  bg = "red.800"
+                  _hover = ""
                 >
                   Clear
                 </Button>
@@ -109,26 +113,15 @@ const LeftBox = ({
             </Flex>
             <Divider my="6" />
             {/* DIVIDER OF LEFT CONTAINER */}
-            <Flex
+           <Flex
               align="center"
               direction={["column", "column", "row", "row", "row", "none"]}
               display={["flex", "flex", "flex", "flex", "flex", "none"]}
               // justify="space-between"
-            >
+            > 
               <Heading>Regular Expression:</Heading>
               <Tag my={1} fontSize={["0.7em", "0.7em", "0.9em"]}>
                 {!prob2 ? regex1 : regex2}
-              </Tag>
-            </Flex>
-            <Flex
-              my={2}
-              direction={["column", "column", "row", "row", "row", "none"]}
-              display={["flex", "flex", "flex", "flex", "flex", "none"]}
-              align="center"
-            >
-              <Heading>Language Accepted:</Heading>
-              <Tag my={1} fontSize={["0.7em", "0.7em", "0.9em"]}>
-                {!prob2 ? "[a, b]" : "[0, 1]"}
               </Tag>
             </Flex>
           </form>

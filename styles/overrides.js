@@ -27,26 +27,18 @@ export const Button = {
     Main: {
       bg:"gray.700"
     },
-    clear: {
-      bg: "red.800",
-      pos: "absolute",
-      left: "28%",
-      top: "55%",
-      _hover: "",
-      fontSize: ["0.7em", "0.7em", "0.9em"],
-    },
     CFG: {
       pos:"absolute",
       left: "12%",
       top: "55%",
-      bg: "gray.700"
+      bg: "gray.700",
     },
     Switch: {
       pos: "absolute",
       left: "3.4%",
       top: "55%",
       bg: "gray.700",
-    }
+    },
   },
   defaultProps: {
     size: "regular",

@@ -19,9 +19,6 @@ const RightBox = ({
     <>
       <Flex align="flex-end" justify="space-between">
         <Heading variant="title">DFA Simulator</Heading>
-        <Code fontSize={["0.5em", null, "0.6em", null, null, "0.6em"]}>
-          BETA
-        </Code>
       </Flex>
 
       <Divider mb="6" />

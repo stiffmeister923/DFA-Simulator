@@ -13,6 +13,7 @@ import {
   PopoverArrow,
   PopoverCloseButton,
 } from "@chakra-ui/react";
+import { ImTextColor } from "react-icons/im";
 
 const PDA = () => {
   // State to toggle between PDA1 and PDA2
@@ -20,7 +21,7 @@ const PDA = () => {
 
   // Example structure for two PDAs
   const pda1States = [
-    { id: "q0", x: 50, y: 100, label: "q0" },
+    { id: "q0", x: 50, y: 100, label: "q0"  },
     { id: "q1", x: 150, y: 100, label: "q1" },
     { id: "q2", x: 250, y: 100, label: "q2" },
   ];
@@ -101,7 +102,7 @@ const PDA = () => {
     <>
       <Popover isLazy placement="top">
         <PopoverTrigger>
-          <Button mx="2">Show PDA</Button>
+          <Button mx="2" left="1%">Show PDA</Button>
         </PopoverTrigger>
         <PopoverContent
           maxW={["17em", null, "16em", null, null, "16em"]}
