@@ -39,7 +39,7 @@ const CFG = ({ prob2 }) => {
           </PopoverHeader>
           <PopoverBody align="center" color="white">
             {!prob2 ? (
-              <VStack>
+              <VStack color="white">
                 <Text>{"S → XYZABC"}</Text>
                 <Text>{"X → b | aa | ab"}</Text>
                 <Text>{"Y → aY | bY | ɛ"}</Text>
@@ -49,7 +49,7 @@ const CFG = ({ prob2 }) => {
                 <Text>{"C → aC | bC | abC | ɛ"}</Text>
               </VStack>
             ) : (
-              <VStack>
+              <VStack color="white">
                 <Text>{"S → XYZABCD"}</Text>
                 <Text>{"X → 1X | 0X | ɛ"}</Text>
                 <Text>{"Y → 11 | 00 | 101 | 010"}</Text>
