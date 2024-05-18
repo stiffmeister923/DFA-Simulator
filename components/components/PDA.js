@@ -28,7 +28,7 @@ const PDA = () => {
           overflowY="auto" // Enable vertical scrolling
 
           _focus=""
-          bg="blue.500"
+          bg="gray.800"
           fontSize={["0.7em", "0.7em", "0.9em"]}
         >
           <PopoverArrow />
