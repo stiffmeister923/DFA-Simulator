@@ -36,7 +36,7 @@ const PDA = () => {
               <VStack>
                 <Box
                   as="img"
-                  src="/pda2_image.png"
+                  src="/pda2.jpeg"
                   alt="PDA 2"
                   width="100%"
                   height="auto"
@@ -48,7 +48,7 @@ const PDA = () => {
               <VStack>
                 <Box
                   as="img"
-                  src="/pda1_image.png"
+                  src="/pda1.jpeg"
                   alt="PDA 1"
                   width="100%"
                   height="auto"
