@@ -39,7 +39,8 @@ const PDA = () => {
                   src="/pda2.jpeg"
                   alt="PDA 2"
                   width="100%"
-                  height="auto"
+                  height="100%"
+                  maxHeight="200px" // Constrain the maximum height
                   objectFit="contain" // Ensure the image scales properly
                 />
                 <Button onClick={() => setShowPDA1(true)}>Show PDA 1</Button>
@@ -51,7 +52,8 @@ const PDA = () => {
                   src="/pda1.jpeg"
                   alt="PDA 1"
                   width="100%"
-                  height="auto"
+                  height="100%"
+                  maxHeight="200px" // Constrain the maximum height
                   objectFit="contain" // Ensure the image scales properly
                 />
                 <Button onClick={() => setShowPDA1(false)}>Show PDA 2</Button>
