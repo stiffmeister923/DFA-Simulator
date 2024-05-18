@@ -24,7 +24,7 @@ const PDA = () => {
         </PopoverTrigger>
         <PopoverContent
           maxW="300px" // Set a maximum width for the popover content
-          maxH="300px
+          maxH="300px"
           overflowY="auto" // Enable vertical scrolling
 
           _focus=""
