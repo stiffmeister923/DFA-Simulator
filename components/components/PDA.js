@@ -24,6 +24,9 @@ const PDA = () => {
         </PopoverTrigger>
         <PopoverContent
           maxW="300px" // Set a maximum width for the popover content
+          maxH="300px
+          overflowY="auto" // Enable vertical scrolling
+
           _focus=""
           bg="black"
           fontSize={["0.7em", "0.7em", "0.9em"]}
@@ -40,7 +43,7 @@ const PDA = () => {
                   alt="PDA 2"
                   width="100%"
                   height="100%"
-                  maxHeight="40px" // Constrain the maximum height
+                  maxHeight="500px" // Constrain the maximum height
                   objectFit="contain" // Ensure the image scales properly
                 />
                 <Button onClick={() => setShowPDA1(true)}>Show PDA 1</Button>
@@ -53,7 +56,7 @@ const PDA = () => {
                   alt="PDA 1"
                   width="100%"
                   height="100%"
-                  maxHeight="400px" // Constrain the maximum height
+                  maxHeight="500px" // Constrain the maximum height
                   objectFit="contain" // Ensure the image scales properly
                 />
                 <Button onClick={() => setShowPDA1(false)}>Show PDA 2</Button>
