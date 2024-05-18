@@ -39,7 +39,7 @@ const LeftBox = ({
               data.map((result, index) => (
                 <Box key={index}>
                   <Flex align="center">
-                    <Heading>Input String {index + 1}:</Heading>
+                    <Heading >Input String {index + 1}:</Heading>
                     <Flex align="center">
                       <Button
                         variant="data"
@@ -71,7 +71,7 @@ const LeftBox = ({
                       </Button>
                     </Flex>
                   </Flex>
-                  <Text>{result.input}</Text>
+                  <Text color="white">{result.input}</Text>
                 </Box>
               ))}
             <Input
