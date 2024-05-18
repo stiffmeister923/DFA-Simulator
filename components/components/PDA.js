@@ -35,12 +35,12 @@ const PDA = () => {
           <PopoverBody align="center">
             {!showPDA1 ? (
               <VStack>
-                <Box as="img" src="pda2.png" alt="PDA 2" />
+                <Box as="img" src="pda2.jpeg" alt="PDA 2" />
                 <Button onClick={() => setShowPDA1(true)}>Show PDA 1</Button>
               </VStack>
             ) : (
               <VStack>
-                <Box as="img" src="pda1.png" alt="PDA 1" />
+                <Box as="img" src="pda1.jpeg" alt="PDA 1" />
                 <Button onClick={() => setShowPDA1(false)}>Show PDA 2</Button>
               </VStack>
             )}
