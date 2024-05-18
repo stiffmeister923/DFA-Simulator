@@ -17,7 +17,13 @@ const CFG = ({ prob2 }) => {
     <>
       <Popover isLazy placement="top">
         <PopoverTrigger>
-          <Button mx="2" variant="CFG">Show CFG</Button>
+          <Button 
+            mx="2"
+            left= "4%"
+            top = "50%"
+            >
+            Show CFG
+            </Button>
         </PopoverTrigger>
         <PopoverContent
           maxW={["17em", null, "16em", null, null, "16em"]}
