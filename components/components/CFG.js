@@ -39,25 +39,25 @@ const CFG = ({ prob2 }) => {
           </PopoverHeader>
           <PopoverBody align="center" color="white">
             {!prob2 ? (
-              <VStack color="white">
-                <Text>{"S → XYZABC"}</Text>
-                <Text>{"X → b | aa | ab"}</Text>
-                <Text>{"Y → aY | bY | ɛ"}</Text>
-                <Text>{"Z → bbZ | abaZ | abZ | ɛ"}</Text>
-                <Text>{"A → aaa | bbb"}</Text>
-                <Text>{"B → a | b"}</Text>
-                <Text>{"C → aC | bC | abC | ɛ"}</Text>
+               <VStack>
+                <Text color="white">{"S → XYZABC"}</Text>
+                <Text color="white">{"X → b | aa | ab"}</Text>
+                <Text color="white">{"Y → aY | bY | ɛ"}</Text>
+                <Text color="white">{"Z → bbZ | abaZ | abZ | ɛ"}</Text>
+                <Text color="white">{"A → aaa | bbb"}</Text>
+                <Text color="white">{"B → a | b"}</Text>
+                <Text color="white">{"C → aC | bC | abC | ɛ"}</Text>
               </VStack>
             ) : (
-              <VStack color="white">
-                <Text>{"S → XYZABCD"}</Text>
-                <Text>{"X → 1X | 0X | ɛ"}</Text>
-                <Text>{"Y → 11 | 00 | 101 | 010"}</Text>
-                <Text>{"Z → 1Z | 0Z | 11Z | 00Z | 101Z | ɛ"}</Text>
-                <Text>{"A → 11 | 00"}</Text>
-                <Text>{"B → 11B | 00B | 101B | ɛ"}</Text>
-                <Text>{"C → 1 | 0"}</Text>
-                <Text>{"D → 1D | 0D | 11D | ɛ"}</Text>
+              <VStack>
+                <Text color="white">{"S → XYZABCD"}</Text>
+                <Text color="white">{"X → 1X | 0X | ɛ"}</Text>
+                <Text color="white">{"Y → 11 | 00 | 101 | 010"}</Text>
+                <Text color="white">{"Z → 1Z | 0Z | 11Z | 00Z | 101Z | ɛ"}</Text>
+                <Text color="white">{"A → 11 | 00"}</Text>
+                <Text color="white">{"B → 11B | 00B | 101B | ɛ"}</Text>
+                <Text color="white">{"C → 1 | 0"}</Text>
+                <Text color="white">{"D → 1D | 0D | 11D | ɛ"}</Text>
               </VStack>
             )}
           </PopoverBody>
