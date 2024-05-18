@@ -34,10 +34,10 @@ const CFG = ({ prob2 }) => {
         >
           <PopoverArrow />
           <PopoverCloseButton />
-          <PopoverHeader fontWeight="semibold" color="black">
+          <PopoverHeader fontWeight="semibold" color="white">
             Context-free Grammar
           </PopoverHeader>
-          <PopoverBody align="center">
+          <PopoverBody align="center" color="white">
             {!prob2 ? (
               <VStack>
                 <Text>{"S → XYZABC"}</Text>
