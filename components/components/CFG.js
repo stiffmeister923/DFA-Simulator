@@ -18,9 +18,10 @@ const CFG = ({ prob2 }) => {
       <Popover isLazy placement="top">
         <PopoverTrigger>
           <Button 
-            mx="2"
+            mx="15"
             left= "4%"
             top = "50%"
+            
             >
             Show CFG
             </Button>
