@@ -74,23 +74,23 @@ const LeftBox = ({
                   <Text color="white">{result.input}</Text>
                 </Box>
               ))}
-            <Stack spacing={3} my={3}>
-      <Box>
-        <Heading size="sm">Language Accepted:</Heading>
-        <Tag my={1} fontSize={["0.7em", "0.7em", "0.9em"]}>
-          {!prob2 ? "[a, b]" : "[0, 1]"}
-        </Tag>
-      </Box>
-      <Input
-        as="textarea"
-        rows={5}
-        maxLength="500"
-        fontSize={["0.7em", "0.7em", "0.9em"]}
-        placeholder={!prob2 ? "e.g. babbabab,baba,ab" : "e.g. 0110101,1010,010"}
-        value={string}
-        onChange={handleTextChange}
-      />
-    </Stack>
+            
+              <Box>
+                <Heading size="sm">Language Accepted:</Heading>
+                <Tag my={1} fontSize={["0.7em", "0.7em", "0.9em"]}>
+                  {!prob2 ? "[a, b]" : "[0, 1]"}
+                </Tag>
+              </Box>
+              <Input
+                as="textarea"
+                rows={5}
+                maxLength="500"
+                fontSize={["0.7em", "0.7em", "0.9em"]}
+                placeholder={!prob2 ? "e.g. babbabab,baba,ab" : "e.g. 0110101,1010,010"}
+                value={string}
+                onChange={handleTextChange}
+              />
+           
 
             <Flex justify="space-between" align="center">
               <Flex>
