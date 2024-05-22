@@ -24,6 +24,10 @@ export const Button = {
       fontSize: ["0.7em", "0.7em", "0.9em"],
       bg: "gray.100",
     },
+    clear: {
+      bg: "red.800",
+      ml: "5"
+    },
     Main: {
       bg:"gray.700"
     },
