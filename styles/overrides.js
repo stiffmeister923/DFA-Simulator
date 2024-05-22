@@ -26,7 +26,7 @@ export const Button = {
     },
     clear: {
       bg: "red.800",
-      ml: "5"
+      ml: "1"
     },
     Main: {
       bg:"gray.700"
