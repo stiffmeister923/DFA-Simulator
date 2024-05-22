@@ -91,7 +91,7 @@ const SecondDFA = ({ currentNodeVal, simulatingStatus }) => {
         size="label"
         color="#C3E0E5"
       >
-        a,b
+        1,0
       </Text>
       {/* q7 q7 */}
       <ArrowLoopSm
