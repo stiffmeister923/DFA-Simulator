@@ -31,7 +31,7 @@ const LeftBox = ({
       <Box
         w={["20em", "20em", "40em", "40em", "40em", "30em"]}
         mr={[0, 0, 0, 0, 0, 24]}
-        mt={[14, 14, 16, 16, 16, 0]}
+        mt={[0, 0, 0, 0, 0, 0]}
       >
         <Box>
           <form onSubmit={handleTest}>
