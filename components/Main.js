@@ -228,7 +228,6 @@ const Main = () => {
         currentNode={currentNode}
         handleSwitch={handleSwitch}
       />
-      <Divider display="block" mt="6" mb="2" />
       <LeftBox
         handleTest={handleTest}
         data={data}
