@@ -76,10 +76,14 @@ const LeftBox = ({
               ))}
             
               <Box>
-                <Heading size="sm">Language Accepted:</Heading>
-                <Tag my={1} fontSize={["0.7em", "0.7em", "0.9em"]}>
-                  {!prob2 ? "[a, b]" : "[0, 1]"}
-                </Tag>
+                <Flex align="center" mb={2}>
+        <Heading size="sm" mr={2}>
+          Language Accepted:
+        </Heading>
+        <Tag fontSize={["0.7em", "0.7em", "0.9em"]}>
+          {!prob2 ? "[a, b]" : "[0, 1]"}
+        </Tag>
+      </Flex>
               </Box>
               <Input
                 as="textarea"
