@@ -84,6 +84,15 @@ const SecondDFA = ({ currentNodeVal, simulatingStatus }) => {
       <Text size="label" top="31%" left="70%" color="#C3E0E5">
         1
       </Text>
+{/* q9 */}
+      <Text
+        top="49%"
+        left={["71%", "71%", "68%", null, null, "97.5%"]}
+        size="label"
+        color="#C3E0E5"
+      >
+        a,b
+      </Text>
       {/* q7 q7 */}
       <ArrowLoopSm
         top={["20%", "20%", "20%", null, null, "20%"]}
