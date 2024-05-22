@@ -12,9 +12,9 @@ import {
   PopoverCloseButton,
 } from "@chakra-ui/react";
 
-const PDA = () => {
+const PDA = ({ prob2 }) => {
   // State to toggle between PDA1 and PDA2
-  const [showPDA1, setShowPDA1] = useState(true);
+  
 
   return (
     <>
@@ -35,7 +35,7 @@ const PDA = () => {
           <PopoverCloseButton />
           <PopoverHeader fontWeight="semibold">Pushdown Automata</PopoverHeader>
           <PopoverBody align="center">
-            {!showPDA1 ? (
+            {!prob2 ? (
               <VStack>
                 <Box
                   as="img"
@@ -59,7 +59,7 @@ const PDA = () => {
                   maxHeight="500px" // Constrain the maximum height
                   objectFit="contain" // Ensure the image scales properly
                 />
-                <Button onClick={() => setShowPDA1(false)}>Show PDA 2</Button>
+                
               </VStack>
             )}
           </PopoverBody>
